@@ -26,3 +26,29 @@ echo ${var,,}
 #use escape sequence to output "
 echo "\"Linux is awesome\""
 ls --help | grep "\-U"
+
+#use ` to get the output of an operation, say an echo command, to a variable
+let val=500/2
+val2=`echo $val`
+echo "value of val2 is $val2"
+
+# : to mean do nothing
+var=20
+if [ $var -lt 15 ]
+then
+	:
+else
+	echo $var
+fi
+
+#  : can also be used to empty a file
+touch wood.txt
+echo "something here " > wood.txt
+cat wood.txt
+
+# To empty the file use :
+: > wood.txt
+cat wood.txt
+
+#  ! is also a special character to use != for NOT EQUAL TO
+# * is used as a wild character

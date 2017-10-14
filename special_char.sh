@@ -77,3 +77,6 @@ echo \'{test1,test2,test3}\'
 
 # To concatenate multiple files into a single file - Below will create file3.txt with contents of file1.txt and file2.txt
 cat {file1.txt,file2.txt} > file3.txt
+
+#{} as a loop
+echo {0..9}

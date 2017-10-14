@@ -78,5 +78,23 @@ echo \'{test1,test2,test3}\'
 # To concatenate multiple files into a single file - Below will create file3.txt with contents of file1.txt and file2.txt
 cat {file1.txt,file2.txt} > file3.txt
 
-#{} as a loop
+#{} as a loop  --- to print numbers 0 to 9
 echo {0..9}
+
+# using || for OR
+# using && for AND
+var1=1
+if [ "$var1" -gt 0 ] || [ "$var1" -eq 10 ]
+then
+	echo " True "
+else
+	echo " False "
+fi
+
+if [ "$var1" -gt 0 ] && [ "$var1" -eq 1]
+then
+	echo " True "
+else
+	echo " False "
+fi
+
